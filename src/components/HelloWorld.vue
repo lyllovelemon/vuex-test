@@ -11,6 +11,9 @@
 <script>
   import {mapGetters,mapActions} from "vuex";
   export default {
+    data(){
+      return{}
+    },
     computed: mapGetters([
       'evenOrOdd'
     ]),
@@ -35,8 +38,8 @@
     background-image: -ms-linear-gradient(top, #3498db, #2980b9);
     background-image: -o-linear-gradient(top, #3498db, #2980b9);
     background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
     border-radius: 28px;
     font-family: Arial;
     color: #ffffff;
