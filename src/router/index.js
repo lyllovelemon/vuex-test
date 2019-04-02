@@ -7,14 +7,15 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path:'/',
+      name:'dialog',
+      component:Dialog
+    },
+    {
+      path: '/hello',
       name: 'HelloWorld',
       component: HelloWorld
     },
-    {
-      path:'/dialog',
-      name:'dialog',
-      component:Dialog
-    }
+
   ]
 })
