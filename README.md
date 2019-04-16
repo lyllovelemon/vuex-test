@@ -1,9 +1,11 @@
 # vue-test
 
-> A Vue.js project
+>vue的小练习，包括以下知识点：
++ vue实现拖拽效果
++ watch深度监听
 
 *** 
-## Build Setup
+## 运行
 ``` bash
 # install dependencies
 npm install
@@ -24,4 +26,3 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
