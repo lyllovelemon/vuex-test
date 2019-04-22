@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import tick from  '../views/tick/index';
+
 Vue.use(Router)
 
 export default new Router({
@@ -8,7 +8,17 @@ export default new Router({
     {
       path:'/',
       name:'tick',
-      component:tick
+      component:()=>import('../views/tick/index'),
+      meta:{
+        title:'nextTick实现'
+      }
+    },
+    {
+      path:'/drag',
+      component:()=>import('../views/drag/index'),
+      meta:{
+        title:'拖拽实现'
+      }
     }
 
   ]

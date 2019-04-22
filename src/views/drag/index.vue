@@ -1,42 +1,36 @@
 <template>
-  <div class="object" v-drag>
-
+  <div class="object" @mousedown="move">
+    {{positionX}}
+    {{positionY}}
   </div>
 </template>
 <script>
   export default {
     data() {
       return {
-
+         positionX:0,
+         positionY:0
         }
       },
-    directives:{
-      drag:{
-        bind:function (el) {
-          let oDiv=el;
-          oDiv.onmousedown=(e)=>{
-            //算出鼠标相对元素的位置
-            let disX=e.clientX-oDiv.offsetLeft;
-            let disY=e.clientY-oDiv.offsetTop;
+    methods:{
+      move(e){
+       let oDiv=e.target;
+       let disX=e.clientX-oDiv.offsetLeft;
+       let disY=e.clientY-oDiv.offsetTop;
+       document.onmousemove=(e)=>{
+         let left=e.clientX-disX;
+         let top=e.clientY-disY;
 
-            document.onmouseout=(e)=>{
-              //用鼠标的位置减去鼠标相对元素的位置，得到元素的位置
-              let left=e.clientX-disX;
-              let top=e.clientY-disY;
+         this.positionX=top;
+         this.positionY=left;
 
-              this.positionX=top;
-              this.positionY=left;
-
-              oDiv.style.left=left+"px";
-              oDiv.style.top=top+"px";
-            };
-
-            document.onmouseup=(e)=>{
-              document.onmousemove=null;
-              document.onmouseup=null;
-            }
-          }
-        }
+         oDiv.style.left=left+'px';
+         oDiv.style.top=top+'px';
+       };
+       document.onmouseup=(e)=>{
+         document.onmousemove=null;
+         document.onmouseup=null;
+       }
       }
     }
 
