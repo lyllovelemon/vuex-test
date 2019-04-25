@@ -19,6 +19,14 @@ export default new Router({
       meta:{
         title:'拖拽实现'
       }
+    },
+    {
+      path:'/page',
+      component:()=>import('../views/pagination/index'),
+      meta:{
+        title:'分页'
+      }
+      
     }
 
   ]
