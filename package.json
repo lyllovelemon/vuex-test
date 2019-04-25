@@ -12,6 +12,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.7.2",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "v-chateditor": "^1.0.5",

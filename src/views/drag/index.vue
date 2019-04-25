@@ -15,8 +15,10 @@
     methods:{
       move(e){
        let oDiv=e.target;
+       // console.log('oDiv',oDiv);
        let disX=e.clientX-oDiv.offsetLeft;
        let disY=e.clientY-oDiv.offsetTop;
+       // console.log('disX:',disX,'disY:',disY);
        document.onmousemove=(e)=>{
          let left=e.clientX-disX;
          let top=e.clientY-disY;
