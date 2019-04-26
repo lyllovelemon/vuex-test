@@ -27,6 +27,13 @@ export default new Router({
         title:'分页'
       }
       
+    },
+    {
+      path:'/directive',
+      component:()=>import(`../views/directive/index`),
+      meta:{
+        title:'vue自定义指令'
+      }
     }
 
   ]
