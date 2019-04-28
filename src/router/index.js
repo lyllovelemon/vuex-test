@@ -34,6 +34,13 @@ export default new Router({
       meta:{
         title:'vue自定义指令'
       }
+    },
+    {
+      path:'/for',
+      component:()=>import(`../views/for/index`),
+      meta:{
+        title:'二维数组遍历'
+      }
     }
 
   ]
