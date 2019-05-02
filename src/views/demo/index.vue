@@ -7,6 +7,9 @@
       <div v-else>
         Now you don't
       </div>
+      <ul>
+        <li v-for="n in evenNumbers">{{ n }}</li>
+      </ul>
     </div>
 </template>
 
@@ -16,13 +19,23 @@
        data(){
           return{
             message:"hello Vue",
-            ok:true
+            ok:true,
+            numbers: [ 1, 2, 3, 4, 5 ]
           }
-       }
+       },
+      computed: {
+        evenNumbers: function () {
+          return this.numbers.filter(function (number) {
+            return number % 2 === 0
+          })
+        }
+      }
 
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="less">
+ul,li{
+  list-style: none;
+}
 </style>
