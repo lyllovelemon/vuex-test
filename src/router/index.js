@@ -7,7 +7,13 @@ export default new Router({
   routes: [
     {
       path:'/',
-      name:'tick',
+      component:()=>import('../views/main'),
+      meta:{
+        title:'主页:slot插槽'
+      }
+    },
+    {
+      path:'tick',
       component:()=>import('../views/tick/index'),
       meta:{
         title:'nextTick实现'
