@@ -20,6 +20,13 @@ export default new Router({
       }
     },
     {
+      path:'/demo',
+      component:()=>import('../views/demo/index'),
+      meta:{
+        title:'vue官网实例'
+      }
+    },
+    {
       path:'/drag',
       component:()=>import('../views/drag/index'),
       meta:{
