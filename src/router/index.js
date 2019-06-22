@@ -54,6 +54,13 @@ export default new Router({
       meta:{
         title:'二维数组遍历'
       }
+    },
+    {
+      path:'/settimeout',
+      component:()=>import('../views/settimeout/index'),
+      meta:{
+        title:'settimeout变量测试'
+      }
     }
 
   ]
