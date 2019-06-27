@@ -83,6 +83,14 @@ export default new Router({
           title:'transition in search'
         }
       }
+      ,
+      {
+        path:'/animate',
+        component:()=>import('../views/animation/index'),
+        meta:{
+          title:'状态动画'
+        }
+      }
     
 
   ]
