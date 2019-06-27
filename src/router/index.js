@@ -75,7 +75,15 @@ export default new Router({
       meta:{
         title:'transition in list'
       }
-    }
+    },
+      {
+        path:'/flip',
+        component:()=>import('../views/trans/flip'),
+        meta:{
+          title:'transition in search'
+        }
+      }
+    
 
   ]
 })
