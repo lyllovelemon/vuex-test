@@ -6,7 +6,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path:'/',
+      path:'/slot',
       component:()=>import('../views/main'),
       meta:{
         title:'主页:slot插槽'
@@ -60,6 +60,20 @@ export default new Router({
       component:()=>import('../views/settimeout/index'),
       meta:{
         title:'settimeout变量测试'
+      }
+    },
+    {
+      path:'/',
+      component:()=>import('../views/trans/index'),
+      meta:{
+        title:'transition'
+      }
+    },
+    {
+      path:'/list',
+      component:()=>import('../views/trans/list'),
+      meta:{
+        title:'transition in list'
       }
     }
 
