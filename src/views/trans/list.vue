@@ -31,22 +31,16 @@
   }
 </script>
 <style lang="less">
-.bounce-enter-active{
-    animation: bounce-in 0.5s;
+.list-item{
+  display: inline-block;
+  margin-right: 10px;
 }
-.bounce-leave-active{
-    animation: bounce-in .5s reverse;
+.list-enter-active,.list-leave-active{
+  transition: all 1s;
 }
-@keyframes bounce-in{
-    0%{
-        transform: scale(0)
-    }
-    50%{
-        transform: scale(1.5);
-    }
-    100%{
-        transform: scale(1);
-    }
+.list-enter,.list-leave-to{
+  opacity: 0;
+  transform: translateY(30px);
 }
 </style>
 
