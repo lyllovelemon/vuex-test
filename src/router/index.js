@@ -13,6 +13,13 @@ export default new Router({
       }
     },
     {
+      path:'/validate',
+      component:()=>import('../views/validate/index'),
+      meta:{
+        title:'正则验证'
+      }
+    },
+    {
       path:'tick',
       component:()=>import('../views/tick/index'),
       meta:{
@@ -90,7 +97,14 @@ export default new Router({
         meta:{
           title:'状态动画'
         }
+      },
+    {
+      path:'/draw',
+      component:()=>import('../views/draw/index'),
+      meta:{
+        title:'抽奖'
       }
+    }
     
 
   ]
