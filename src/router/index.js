@@ -20,7 +20,14 @@ export default new Router({
       }
     },
     {
-      path:'tick',
+      path:'/mixins',
+      component:()=>import('../views/mixin/index'),
+      meta:{
+        title:'mixin测试'
+      }
+    },
+    {
+      path:'/tick',
       component:()=>import('../views/tick/index'),
       meta:{
         title:'nextTick实现'
@@ -46,7 +53,7 @@ export default new Router({
       meta:{
         title:'分页'
       }
-      
+
     },
     {
       path:'/directive',
@@ -105,7 +112,7 @@ export default new Router({
         title:'抽奖'
       }
     }
-    
+
 
   ]
 })
