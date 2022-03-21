@@ -23,6 +23,11 @@ export default {
         number(newValue){
             TweenLite.to(this.$data,0.5,{tweenedNumber:newValue})
         }
+    },
+    methods(){
+      test(){
+
+      }
     }
 }
 </script>
