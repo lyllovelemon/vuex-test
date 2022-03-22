@@ -66,9 +66,16 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "*.{js,vue}": [
-      "eslint --max-warnings 0"
+    "src/**/*.{js,vue}": [
+      "eslint --fix --ext .js,.vue",
+      "git add "
     ]
   },
   "engines": {

@@ -16,6 +16,13 @@
 		  return{
 		    data:['lemon','dean','sakura','meiko']
       }
+    },
+    methods:{
+		  test(){
+		    let arr=[]
+        let arr2=new Array()
+        console.log(arr,arr2)
+      }
     }
 	}
 </script>
